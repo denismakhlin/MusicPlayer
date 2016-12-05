@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.makhlind.musicplayer.MainActivity">
+    tools:context="android.makhlind.musicplayer.MainActivity">
     <TextView
         android:id="@+id/view1"
         android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/view2"
         android:layout_centerHorizontal="true"
-        android:text="Sub Heading"
+
         android:textSize="36sp" />
 
 
@@ -38,17 +38,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/view3"
-        android:text="Medium Text"
+
         android:textSize="36sp"/>
 
     <Button
         android:id="@+id/view5"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/view6"
+        android:layout_toLeftOf="@+id/view6"
         android:layout_alignParentBottom="true"
         android:background="#ddd"
-        android:text="<"
+        android:text="rew"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:onClick="rewindSong"
@@ -58,7 +58,7 @@
         android:id="@+id/view6"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/view7"
+        android:layout_toLeftOf="@+id/view7"
         android:layout_alignParentBottom="true"
         android:background="#ddd"
         android:text="\u220E"
@@ -100,7 +100,7 @@
         android:layout_toRightOf="@id/view8"
         android:layout_alignParentBottom="true"
         android:background="#ddd"
-        android:text=">"
+        android:text="for"
         android:layout_marginLeft="10dp"
         android:gravity="center"
         android:onClick="forwardSong"

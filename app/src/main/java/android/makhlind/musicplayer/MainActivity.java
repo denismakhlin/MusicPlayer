@@ -13,7 +13,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.makhlind.musicplayer.R.id.time;
+
 
 
 public class MainActivity extends AppCompatActivity {

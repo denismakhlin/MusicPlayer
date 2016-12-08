@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         int endSeconds = ((int) (finalTimeMS / 1000)) %60;
 
         finalTimeView = (TextView) findViewById(R.id.view11);
-        finalTimeView.setText(endMinutes + " min " + endSeconds + " sec");
+        finalTimeView.setText(endMinutes + ":" + endSeconds);
 
         playButtonVar = (Button) findViewById(R.id.view8);
         pauseButtonVar = (Button) findViewById(R.id.view7);
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         String songTitle = songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
         String songAuthor = songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
 
-        title.setText(songTitle);
-        author.setText(songAuthor);
+        title.setText("Song: " + songTitle);
+        author.setText("Artist: " + songAuthor);
 
     }
 
@@ -94,16 +94,11 @@ public class MainActivity extends AppCompatActivity {
             int currentSeconds = ((int) (currentTimeMS / 1000)) % 60;
 
             currentTimeView = (TextView) findViewById(R.id.view10);
-            currentTimeView.setText(currentMinutes + " min, " + currentSeconds + " sec");
+            currentTimeView.setText(currentMinutes + ":" + currentSeconds);
 
-            //For Rewind / Forward Buttons
             if(currentTimeMS > 5000) {
                 rewindButtonVar.setEnabled(true);
             }
-            else {
-                rewindButtonVar.setEnabled(false);
-            }
-
             if(currentTimeMS < finalTimeMS - 5000) {
                 forwardButtonVar.setEnabled(true);
             }

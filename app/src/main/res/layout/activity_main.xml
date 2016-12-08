@@ -11,6 +11,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="\u266b Sweet Music Player \u266b"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
         android:textSize="35sp" />
 
     <ImageView
@@ -22,24 +24,6 @@
         android:layout_centerHorizontal="true"
         />
 
-    <TextView
-        android:id="@+id/view3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view2"
-        android:layout_centerHorizontal="true"
-
-        android:textSize="36sp" />
-
-
-    <TextView
-        android:id="@+id/view4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/view3"
-
-        android:textSize="36sp"/>
 
     <Button
         android:id="@+id/view5"
@@ -48,7 +32,7 @@
         android:layout_toLeftOf="@+id/view6"
         android:layout_alignParentBottom="true"
         android:background="#ddd"
-        android:text="rew"
+        android:text="R"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:onClick="rewindSong"
@@ -100,7 +84,7 @@
         android:layout_toRightOf="@id/view8"
         android:layout_alignParentBottom="true"
         android:background="#ddd"
-        android:text="for"
+        android:text="F"
         android:layout_marginLeft="10dp"
         android:gravity="center"
         android:onClick="forwardSong"
@@ -108,36 +92,50 @@
 
     <TextView
         android:id="@+id/view10"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/view9"
-        android:layout_alignParentTop="@id/view9"
+        android:layout_above="@+id/seekBar"
         android:layout_toLeftOf="@id/view6"
         android:layout_marginRight="10dp"
-        android:background="#ddd"
         android:gravity="center"
-        android:onClick="playSong"
-        android:textSize="36sp"/>
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/view11"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/view9"
-        android:layout_alignParentTop="@id/view9"
+        android:layout_above="@+id/seekBar"
         android:layout_toRightOf="@id/view8"
-        android:background="#ddd"
         android:layout_marginLeft="10dp"
         android:gravity="center"
-        android:onClick="playSong"
-        android:textSize="36sp"/>
+        android:textSize="15sp"/>
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/view5"
+        android:layout_above="@id/view7"
         android:layout_alignLeft="@id/view5"
         android:layout_alignRight="@id/view9"/>
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/view2"/>
+
+    <TextView
+        android:id="@+id/view4"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view3"
+        android:textSize="36sp"/>
+
 
 </RelativeLayout>

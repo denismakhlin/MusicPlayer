@@ -1,6 +1,7 @@
 package android.makhlind.musicplayer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         title.setText("Song: " + songTitle);
         author.setText("Artist: " + songAuthor);
+
 
     }
 

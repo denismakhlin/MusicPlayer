@@ -12,8 +12,19 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:text="Bargains in a tuxedo"
-        android:onClick="chooseSong"
+        android:onClick="launchArduous"
         />
+
+    <Button
+        android:id="@+id/chooseButton2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/chooseButton1"
+        android:text="Arduous Task"
+        android:onClick="launchBargains"
+        />
+
 
 
 

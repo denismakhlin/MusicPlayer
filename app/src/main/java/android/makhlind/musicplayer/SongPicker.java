@@ -24,4 +24,21 @@ public class SongPicker extends AppCompatActivity {
         chooseButtonVar.setEnabled(true);
         startActivity(launchSongPlayer);
     }
+
+    public void launchBargains(View view){
+        String bargains = String.valueOf(R.raw.bargainsinatuxedo);
+        launchPlayer(bargains);
+    }
+
+    public void launchArduous(View view){
+        String arduous = String.valueOf(R.raw.arduoustask);
+        launchPlayer(arduous);
+    }
+
+    public void launchPlayer(String songID){
+//Create your Intent:  Intent launchSongPlayer
+        String message = String.valueOf(R.raw.bargainsinatuxedo);
+        launchSongPlayer.putExtra("songMessage", songID);
+//Launch your Intent
+    }
 }

@@ -1,6 +1,7 @@
 package android.makhlind.musicplayer;
 
 import android.content.Intent;
+import android.media.MediaMetadataRetriever;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,16 @@ public class SongPicker extends AppCompatActivity {
         setContentView(R.layout.activity_song_picker);
         chooseButtonVar = (Button) findViewById(R.id.chooseButton1);
         launchSongPlayer = new Intent(this, MainActivity.class);
+
+        int bargainsID = R.raw.bargainsinatuxedo;
+        String bargainsTitle= songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
+        String bargainsArtist = songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+        bargainsSong; = new SongObject(bargainsID, bargainsTitle,bargainsArtist);
+
+        int arduousSong = R.raw.arduoustask;
+        String arduousTitle= songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
+        String aurduousArtist = songInfo.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+        arduousSong = new SongObject(arduousID, arduousTitle,arduousArtist);
     }
 
     public void chooseSong(View view) {
@@ -36,9 +47,7 @@ public class SongPicker extends AppCompatActivity {
     }
 
     public void launchPlayer(String songID){
-//Create your Intent:  Intent launchSongPlayer
-        String message = String.valueOf(R.raw.bargainsinatuxedo);
         launchSongPlayer.putExtra("songMessage", songID);
-//Launch your Intent
+
     }
 }
